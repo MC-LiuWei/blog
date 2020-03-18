@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-03-17 17:53:02
+ * @LastEditTime: 2020-03-19 04:11:08
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /blog/themes/obstheme/source/js/busuanzi.js
+ */
 function initialBusuanzi() {
     var bszCaller, bszTag;
     ! function() {
@@ -57,7 +65,11 @@ function initialBusuanzi() {
         shows: function() {
             this.bszs.map(function(a) {
                 var b = document.getElementById("busuanzi_container_" + a);
-                b && (b.style.display = "flex")
+                if (b) {
+                    b.style.display = "flex";
+                    b.style.flexDirection = 'row';
+                    b.style.justifyContent = 'center';
+                }
             })
         }
     };
