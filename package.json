@@ -7,7 +7,6 @@
         "build": "hexo generate",
         "clean": "hexo clean",
         "predeploy": "npm run build",
-        "postdeploy": "",
         "deploy": "gh-pages -d public",
         "server": "hexo server"
     },
