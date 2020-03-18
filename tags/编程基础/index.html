@@ -15,7 +15,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>
-            Hello World - Hexo
+            Tag: 编程基础 - Hexo
         </title>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -24,8 +24,6 @@
             <meta name="keywords" content="TriDiamond Obsidian,">
             
                 
-                    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any pr,">
-                    
                         
                             <meta name="author" content="Fred liu">
                             
@@ -71,211 +69,160 @@
     </div>
     <span id="config-title" style="display:none">Hexo</span>
     <div id="loader"></div>
-    <div id="single">
-    <div class="scrollbar gradient-bg-rev"></div>
-<div id="top" style="display: block;">
-    <div class="bar" style="width: 0;"></div>
-    <div class="navigation animated fadeIn fast delay-1s">
-        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://blog.lemonpai.cn">
-        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">Hello World</h3>
-        <div class="social">
-            <!--        <div class="like-icon">-->
-            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
-            <!--        </div>-->
-            <div>
-                <div class="share">
-                    
-                        <a href="javascript:;" class="iconfont icon-share1"></a>
-                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-    <div class="section">
-        <div class=article-header-wrapper>
-    <div class="article-header">
-        <div class="article-cover animated fadeIn" style="
-            animation-delay: 600ms;
-            animation-duration: 1.2s;
-            background-image: 
-                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-                url(/img/cover.jpg) ">
-        </div>
-        <div class="else">
-            <p class="animated fadeInDown">
-                
-                    <a href="/categories/Category1"><b>「
-                    </b>CATEGORY1<b> 」</b></a>
-                    
-                            三月 17, 2020
-            </p>
-            <h3 class="post-title animated fadeInDown">
-                <a href="/2020/03/17/hello-world/" title="Hello World" class="">Hello World</a>
-            </h3>
+    <!--
+ * @Author: your name
+ * @Date: 2020-03-17 17:53:02
+ * @LastEditTime: 2020-03-17 18:51:55
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /blog/themes/obstheme/layout/_partial/menu.ejs
+ -->
+<div class="nav">
+    <ul id="menu-menu" class="menu">
+        
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/about/" title="关于" external="false">关于</a>
+            </li>
             
-                <p class="post-count animated fadeInDown">
-                    
-                        <span>
-                    <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    2.4k
-                </span>
-                        
-                            
-                                <span>
-                    <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    2 mins.
-                </span>
-                                
-                                    
-                                            
-                                                <span id="busuanzi_container_page_pv">
-                    <b class="iconfont icon-read"></b> <i>阅读次数</i>
-                    <span id="busuanzi_value_page_pv">0</span>
-                                                </span>
-                                                
-                </p>
-                
-                    
-                        <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Tag1/" rel="tag">Tag1</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Tag2/" rel="tag">Tag2</a></li></ul>
-                            
-        </div>
-    </div>
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/categories/" title="分类" external="false">分类</a>
+            </li>
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/tags/" title="标签" external="false">标签</a>
+            </li>
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/archives/" title="归档" external="false">归档</a>
+            </li>
+            
+    </ul>
+    <p class="copyright" id="copyright">
+        &copy;
+        2020
+            Fred liu. Powered by
+                <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+                    Theme
+                    <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+    </p>
 </div>
-
-<div class="screen-gradient-after">
-    <div class="screen-gradient-content">
-        <div class="screen-gradient-content-inside">
-            <div class="bold-underline-links screen-gradient-sponsor">
-                <p>
-                    <span class="animated fadeIn delay-1s"></span>
-                </p>
+<div id="container">
+    
+    <div class="search-box">
+        <form class="site-search-form">
+            <span class="iconfont icon-search"></span>
+            <input type="text" id="local-search-input" class="st-search-input" />
+            <div class="iconfont icon-cross search-box-close"></div>
+        </form>
+        <div class="search-scrollable">
+            <div id="local-search-result" class="local-search-result-cls" data-initialise="首次搜索，正在载入索引文件，请稍后……" data-start="输入关键词搜索。" data-empty="没有找到内容，请尝试更换检索词。">
+                <span>输入关键词搜索。</span>
             </div>
         </div>
     </div>
-</div>
-
-<div class="article">
-    <div class='main'>
-        <div class="content markdown animated fadeIn">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-                <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-                <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
-                <source type="audio/mpeg" src="">
-            </audio>
+    <div id="header">
+        <div>
+            <div class="logo animated fadeInDown">
+                <img src="/img/favicon.png" alt="">
+                <a class="image-logo" href="/"></a>
+            </div>
+            <ul id="menu-menu" class="menu text-menu">
                 
-                    <ul id="audio-list" style="display:none">
+                    <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                        <a href="/about/" title="关于" external="false" class="menu-link">关于</a>
+                    </li>
+                    
+                    <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                        <a href="/categories/" title="分类" external="false" class="menu-link">分类</a>
+                    </li>
+                    
+                    <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                        <a href="/tags/" title="标签" external="false" class="menu-link">标签</a>
+                    </li>
+                    
+                    <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                        <a href="/archives/" title="归档" external="false" class="menu-link">归档</a>
+                    </li>
+                    
                         
+                            <li class="animated fadeInDown search-bar iconfont icon-search"></li>
                             
-                                    <li title='0' data-url='/statics/SidewalkCafe.mp3'></li>
+            </ul>
+            <div class="iconfont icon-menu switchmenu gradient-text animated fadeInDown"></div>
+        </div>
+    </div>
+    <div id="screen">
+        <div id="mark">
+            <div class="cover animated fadeIn" style="
+            animation-delay: 900ms;
+            animation-duration: 2.8s;
+            background-image:
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.56), #100e17),
+                url(/%20/img/cover.jpg%20);">
+            </div>
+        </div>
+        
+            <div id="post0" class="else">
+                <p class="animated fadeInDown">
+                    
+                        <a href="/categories/LeetCode"><b>「
+                </b>LEETCODE<b> 」</b></a>
+                        
+                                三月 19, 2020
+                </p>
+                <h3 class="post-title animated fadeInDown">
+                    <a href="/2020/03/19/Circularqueue/" title="从双指针在循环队列里的使用" class="posttitle">从双指针在循环队列里的使用</a>
+                </h3>
+                
+                    <p class="post-count animated fadeInDown">
+                        
+                            <span>
+                <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                1.3k
+            </span>
+                            
+                                
+                                    <span>
+                <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                1 mins.
+            </span>
                                     
                                         
-                    </ul>
+                    </p>
                     
                         
-                            
-    <div id='gitalk-container' class="comment link"
-        data-ae='true'
-        data-ci='2421deae6545126453c1'
-        data-cs='1e1a25123f5e03c87a9f6eaef6a13e5b616ef5ff'
-        data-r='blog'
-        data-o='MC-LiuWei'
-        data-a='MC-LiuWei'
-        data-d=''
-    >留言</div>
-
-
+                            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/" rel="tag">编程基础</a></li></ul>
                                 
-                                    
-        </div>
-        <div class="sidebar">
-            <div class="box animated fadeInRight">
-                <div class="subbox">
-                    <img src="/img/avatar.jpeg" height=300 width=300></img>
-                    <p>
-                        Fred liu
-                    </p>
-                    <span>Live with your heart, don't be moved by it, maybe the end is not the result you want</span>
-                    <dl>
-                        
-                            <dd><a href="https://github.com/MC-LiuWei" target="_blank"><span
-                                class="iconfont icon-github"></span></a></dd>
-                            
-                            <dd><a href="https://www.zhihu.com/people/liu-wei-43-97-54" target="_blank"><span
-                                class="iconfont icon-zhihu"></span></a></dd>
-                            
-                            <dd><a href="https://weibo.com/1949497417/profile?topnav=1&wvr=6" target="_blank"><span
-                                class="iconfont icon-weibo"></span></a></dd>
-                            
-                                <!-- <dd><a href="https://github.com/MC-LiuWei" target="_blank"><span
-                                    class=" iconfont icon-github"></span></a></dd>
-                                <dd><a href="" target="_blank"><span
-                                    class=" iconfont icon-twitter"></span></a></dd>
-                                <dd><a href="" target="_blank"><span
-                                    class=" iconfont icon-stack-overflow"></span></a></dd> -->
-                    </dl>
-                </div>
-                <ul>
-                    <li>
-                        <a href="/">
-                            1
-                                <p>
-                                    文章
-                                </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/categories">
-                            2
-                                <p>
-                                    分类
-                                </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/tags">
-                            2
-                                <p>
-                                    标签
-                                </p>
-                        </a>
-                    </li>
-                </ul>
+                                    <div class="md-content animated fadeIn">
+                                        
+                                            <p>前两天从新的再走一遍leetcode的数据结构基础，又仔细看了看循环队列的实现。对于示例解答的基础代码仔细的看了看，发现有和我最开始的实现方式的操作，都是用push和shift之类的api去做的。对照...</p>
+                                                
+                                                            <span class="read-more"><a href="/2020/03/19/Circularqueue/" title="查看全文" class="posttitle">查看全文</a>
+                <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+                                    </div>
             </div>
             
-                
-                    
-                        <div class="box sticky animated fadeInRight faster">
-                            <div id="toc" class="subbox">
-                                <h4>
-                                    目录
-                                </h4>
-                                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
-                            </div>
-                        </div>
-                        
-                            
+    </div>
+
+    <div class="screen-gradient-after">
+        <div class="screen-gradient-content">
+            <div class="screen-gradient-content-inside">
+                <div class="bold-underline-links screen-gradient-sponsor">
+                    <p>
+                        <span class="typed-text"></span>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+    <div id="primary">
+        
     </div>
+    
 </div>
+<div id="preview"></div>
+
+
     <div id="back-to-top" class="animated fadeIn faster">
         <div class="flow"></div>
         <span class="percentage animated fadeIn faster">0%</span>
