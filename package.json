@@ -3,14 +3,20 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
+        "prebuild": "npm run clean && del ./public",
         "build": "hexo generate",
         "clean": "hexo clean",
+        "predeploy": "npm run build",
+        "postdeploy": "",
         "deploy": "gh-pages -d public",
         "server": "hexo server"
     },
     "hexo": {
         "version": "4.2.0"
     },
+    "pre-push": [
+        "deploy"
+    ],
     "dependencies": {
         "hexo": "^4.0.0",
         "hexo-generator-archive": "^1.0.0",
@@ -23,6 +29,8 @@
         "hexo-server": "^1.0.0"
     },
     "devDependencies": {
-        "gh-pages": "^2.2.0"
+        "del-cli": "^3.0.0",
+        "gh-pages": "^2.2.0",
+        "pre-push": "^0.1.1"
     }
 }
