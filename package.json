@@ -5,6 +5,7 @@
     "scripts": {
         "prebuild": "npm run clean && del ./public",
         "build": "hexo generate",
+        "postbuild": "copy ./CNAME ./public",
         "clean": "hexo clean",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d public",
@@ -28,6 +29,7 @@
         "hexo-server": "^1.0.0"
     },
     "devDependencies": {
+        "copy": "^0.3.2",
         "del-cli": "^3.0.0",
         "gh-pages": "^2.2.0",
         "pre-push": "^0.1.1"
