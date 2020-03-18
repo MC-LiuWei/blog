@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-03-17 17:53:02
- * @LastEditTime: 2020-03-19 04:11:08
+ * @LastEditTime: 2020-03-19 04:18:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /blog/themes/obstheme/source/js/busuanzi.js
@@ -41,7 +41,8 @@ function initialBusuanzi() {
                     try {
                         a(b), scriptTag.parentElement.removeChild(scriptTag)
                     } catch (c) {
-                        bszTag.hides()
+                        console.log(c);
+                        //bszTag.hides()
                     }
                 })
             }
@@ -59,7 +60,7 @@ function initialBusuanzi() {
         hides: function() {
             this.bszs.map(function(a) {
                 var b = document.getElementById("busuanzi_container_" + a);
-                b && (b.style.display = "none")
+                //b && (b.style.display = "none")
             })
         },
         shows: function() {
