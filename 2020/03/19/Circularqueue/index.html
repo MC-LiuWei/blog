@@ -121,13 +121,13 @@
                     
                         <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    2.6k
+                    4.1k
                 </span>
                         
                             
                                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    2 mins.
+                    4 mins.
                 </span>
                                 
                                     
@@ -172,7 +172,6 @@
         this.length = this.queue.length;
     }
 
-    // 插入
     insert(item) {
         if (this.isFull()) return false;
         if (this.isEmpty()) this.head = 0;
@@ -226,7 +225,42 @@ console.log(a[1]); // 现在访问索引为1的元素是2
 a.shift();
 console.log(a[1]); // 现在访问索引为1的元素是3</code></pre>
 <p>用shift操作中的一点是会引起数组的索引偏移，这个操作成本有点划不来，为了操作一个元素，要引起后面一连串的操作。用push虽然不会有偏移出现，但是数组的存储大小会改变。顺序队列没问题它可以是静态也可以动态，循环队列也可以，只是有点不太符合循环队列使队列空间重复利用的要求，重复利用是空间有限的情况。</p>
-<p>再来说在这个代码里对指针的最大化使用，</p>
+<h4 id="指针的利用"><a href="#指针的利用" class="headerlink" title="指针的利用"></a>指针的利用</h4><p>再来说在这个代码里对指针的最大化使用，感觉对编码里变量声名也是有一些帮助，有时候我们写代码会声名很多的变量，可是未必需要这么多也许一两个就能把功能做完，所以声名的时候也还是得考虑整个功能。这个里面头尾指针一共有三种作用，分别是：</p>
+<h5 id="1-充当访问索引"><a href="#1-充当访问索引" class="headerlink" title="1.充当访问索引"></a>1.充当访问索引</h5><pre><code class="js">this.queue[this.footer] = item;
+
+if (!this.isEmpty()) return this.queue[this.footer];
+
+if (!this.isEmpty)) return this.queue[this.head];
+
+this.head = (this.head + 1)%this.length;
+
+this.footer = (this.footer + 1)%this.length;</code></pre>
+<p>这个非常舒服，用头尾指针的移动模拟出队列的入队和出队，做到了只有在插入的时候替换原数组对应索引下元素最小化对数组的操作，稳定还高效。</p>
+<h5 id="2-循环逻辑实现"><a href="#2-循环逻辑实现" class="headerlink" title="2.循环逻辑实现"></a>2.循环逻辑实现</h5><pre><code class="js">    insert(item) {
+        if (this.isFull()) return false;
+        if (this.isEmpty()) this.head = 0;
+        // 循环控制
+        this.footer = (this.footer + 1)%this.length;
+        this.queue[this.footer] = item;
+        return true;
+    }
+
+    delete() {
+        if (!this.isEmpty()) {
+            if (this.head === this.footer) {
+                // 循环控制
+                this.head = -1;
+                this.footer = -1;
+            } else {
+                // 循环控制
+                this.head = (this.head + 1)%this.length;
+            }
+            return true;
+        }
+        return false;
+    }</code></pre>
+<p>在队列里能不能做插入和删除的前提是存储空间是不是满的或者是不是空的，既然用双指针去模拟删除插入也就不是真的去删除数组元素添加元素（替换）。那非空或者满的条件只有通过指针重合去实现。</p>
+<h5 id="队列为空的状态"><a href="#队列为空的状态" class="headerlink" title="队列为空的状态"></a>队列为空的状态</h5><p><img src="../img/queueone.png" alt="avatar"></p>
 
                 <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
                 <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
