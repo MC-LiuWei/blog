@@ -121,7 +121,7 @@
                     
                         <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    4.1k
+                    4.4k
                 </span>
                         
                             
@@ -260,8 +260,9 @@ this.footer = (this.footer + 1)%this.length;</code></pre>
         return false;
     }</code></pre>
 <p>在队列里能不能做插入和删除的前提是存储空间是不是满的或者是不是空的，既然用双指针去模拟删除插入也就不是真的去删除数组元素添加元素（替换）。那非空或者满的条件只有通过指针重合去实现。循环的处理主要利用取模的方式去处理头尾指针。</p>
-<p><img src="/imgs/queuethree.png" alt="队列循环逻辑"></p>
-<h2 id="循环队列的使用"><a href="#循环队列的使用" class="headerlink" title="循环队列的使用"></a>循环队列的使用</h2>
+<p><img src="/imgs/queueonethree.png" alt="队列循环逻辑"></p>
+<h2 id="循环队列的使用"><a href="#循环队列的使用" class="headerlink" title="循环队列的使用"></a>循环队列的使用</h2><p>循环队列一般被用作环形缓冲区。从业以来听的比较多的就是消息队列，单从消息队列来看，队列的使用主要为了减小服务端处理的压力。两个服务之间调用，每次调用的参数就好像是数组里的一个元素，只有真正被响应了才会从中清除。在前端处理一些高频率函数调用的时候有时也会需要这样的操作，本质上就是将本来在短期内需要处理的操作将它依次延后操作。循环缓冲区主要的区别在于定长的队列空间重复利用，这其实是对队列系统的内存使用空间控制。再形象点的联想这个循环缓冲还和前端的首页滚动横幅还是有那么点像呢。不过这个首页滚动横幅这个地方其实更像兵乓队列。</p>
+
                 <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
                 <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
                 <source type="audio/mpeg" src="">
