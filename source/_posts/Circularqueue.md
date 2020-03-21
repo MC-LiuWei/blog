@@ -1,6 +1,7 @@
 ---
 title: 对js使用双指针实现循环队列里的理解
 date: 2020-03-19 01:01:43
+cover: /imgs/queuebgone.jpeg
 categories:
     - LeetCode
 tags:
