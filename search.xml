@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>前端配置化项目思考</title>
+      <link href="/2020/03/26/FrontendConfigurationProjectThinking/"/>
+      <url>/2020/03/26/FrontendConfigurationProjectThinking/</url>
+      
+        <content type="html"><![CDATA[<p>进入项目已经两个多月了，慢慢对项目有了一点感觉。结合同事的讲解看，总体来说方案还是很快捷的。只是感觉似乎还有些点不太完善，同时觉得这个方案做的早了一点，并且留的时间似乎不多，如果继续在上面加逻辑后面应该会比较臃肿。目前的一点想法，是早上洗澡的闲暇者无事想的，或许不是太完善先记录一点可能后面再深入熟悉会有一定完善。</p><h2 id="目前的方案"><a href="#目前的方案" class="headerlink" title="目前的方案"></a>目前的方案</h2><h3 id="总述"><a href="#总述" class="headerlink" title="总述"></a>总述</h3><p>前端在平台上分为安卓、ios、web,主要功能还是以web的方式呈现，ios和安卓使用web容器展示。属于全球招聘计划，表单流程为主。目前的方案是通过配置实现前端页面渲染同时控制前后交互的逻辑，在前端这边定制好视图后扩展基本靠配置。这个部分是针对业务实现和扩展来做的，还有一部分是代码设计部分。从大的结构看，分为流程控制容器、错误控制容器、表单数据容器、主题容器。<br><img src="/imgs/one.png?center" alt="代码方案"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>对js使用双指针实现循环队列里的理解</title>
       <link href="/2020/03/19/Circularqueue/"/>
       <url>/2020/03/19/Circularqueue/</url>

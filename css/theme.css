@@ -30,3 +30,7 @@
   background: -webkit-linear-gradient(to right, var(--dark), var(--secondary), var(--primary)) !important;
   background: linear-gradient(to right, var(--dark), var(--secondary), var(--primary)) !important;
 }
+img[url$="center"] {
+  display: block;
+  margin: 0 auto;
+}
