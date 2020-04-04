@@ -2852,6 +2852,7 @@ h1.title {
   border-bottom: var(--dark) 1px solid;
 }
 .content img {
+  margin: 0 auto;
   cursor: pointer;
   border-radius: 8px;
 }

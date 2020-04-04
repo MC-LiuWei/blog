@@ -120,7 +120,7 @@
                     
                         <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    548
+                    1.1k
                 </span>
                         
                             
@@ -161,7 +161,11 @@
     <div class='main'>
         <div class="content markdown animated fadeIn">
             <p>进入项目已经两个多月了，慢慢对项目有了一点感觉。结合同事的讲解看，总体来说方案还是很快捷的。只是感觉似乎还有些点不太完善，同时觉得这个方案做的早了一点，并且留的时间似乎不多，如果继续在上面加逻辑后面应该会比较臃肿。目前的一点想法，是早上洗澡的闲暇者无事想的，或许不是太完善先记录一点可能后面再深入熟悉会有一定完善。</p>
-<h2 id="目前的方案"><a href="#目前的方案" class="headerlink" title="目前的方案"></a>目前的方案</h2><h3 id="总述"><a href="#总述" class="headerlink" title="总述"></a>总述</h3><p>前端在平台上分为安卓、ios、web,主要功能还是以web的方式呈现，ios和安卓使用web容器展示。属于全球招聘计划，表单流程为主。目前的方案是通过配置实现前端页面渲染同时控制前后交互的逻辑，在前端这边定制好视图后扩展基本靠配置。这个部分是针对业务实现和扩展来做的，还有一部分是代码设计部分。从大的结构看，分为流程控制容器、错误控制容器、表单数据容器、主题容器。<br><img src="/imgs/one.png?center" alt="代码方案"></p>
+<h2 id="目前的方案"><a href="#目前的方案" class="headerlink" title="目前的方案"></a>目前的方案</h2><h3 id="总述"><a href="#总述" class="headerlink" title="总述"></a>总述</h3><p>前端在平台上分为安卓、ios、web,主要功能还是以web的方式呈现，ios和安卓使用web容器展示。属于全球招聘计划，表单流程为主。目前的方案是通过配置实现前端页面渲染同时控制前后交互的逻辑，在前端这边定制好视图后扩展基本靠配置。这个部分是针对业务实现和扩展来做的，还有一部分是代码设计部分。从大的结构看，分为流程控制部分、异常部分、表单渲染及主题配置。</p>
+<p><img src="/imgs/flow-one.png?center" alt="概述"></p>
+<p>前端使用的<code>react</code>所以整套方案最主要的是利用大量的<code>hook</code>去管理状态，并且通过<code>useContext</code>实现分层。来说说为什么选这样的方案，出发点是一套web代码多处使用，同时能快速通过配置扩展出一个市场。然而这种说法不知道多少人喊，好与不好再说吧。</p>
+<h3 id="从服务到配置到前端"><a href="#从服务到配置到前端" class="headerlink" title="从服务到配置到前端"></a>从服务到配置到前端</h3><p>1.核心url<br><img src="/imgs/cr_one.png?center" alt="基本关系"></p>
+<p>在这个部分核心的依赖其实<code>makeBaseApi</code>这个块，它依赖访问的url中的参数构建一个基本的访问api。页面的最终渲染依赖于配置接口，流程查询接口，和数据支持接口三者缺一不可。首先进入页面会访问配置接口取出配置，配置里面包含<code>1.流程的控制配置以及对应页面的配置</code>,<code>2.页面渲染配置</code>,<code>3.接口调用配置</code>。从配置入手来看流程的处理方式，再说这样的方式约束性在哪里。图可能比较多，个人觉得这样比较直观一点吧。</p>
 
                 <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
                 <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
@@ -254,7 +258,7 @@
                                 <h4>
                                     目录
                                 </h4>
-                                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目前的方案"><span class="toc-number">1.</span> <span class="toc-text">目前的方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#总述"><span class="toc-number">1.1.</span> <span class="toc-text">总述</span></a></li></ol></li></ol>
+                                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目前的方案"><span class="toc-number">1.</span> <span class="toc-text">目前的方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#总述"><span class="toc-number">1.1.</span> <span class="toc-text">总述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#从服务到配置到前端"><span class="toc-number">1.2.</span> <span class="toc-text">从服务到配置到前端</span></a></li></ol></li></ol>
                             </div>
                         </div>
                         
